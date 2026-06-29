@@ -13,7 +13,7 @@
 
 **FastRestaurant** nace para resolver un problema muy concreto de los restaurantes medianos: la falta de sincronización entre el salón y la cocina durante las horas pico. Sin un sistema que ordene los tiempos de preparación, los mozos cargan comandas "a ciegas", los platos llegan fríos o desincronizados a la mesa, y cada noche de pico se convierte en una apuesta.
 
-El desafío principal no fue solo digitalizar la toma de pedidos, sino diseñar un **motor de orquestación de tiempos** capaz de retrasar automáticamente los platos rápidos hasta que los lentos estén en la etapa correcta — y recalcular todo en tiempo real — sobre una arquitectura de **Microservicios en .NET 8** comunicados vía HTTP y eventos en tiempo real con **SignalR**.
+Desarrollo de un sistema de gestión de pedidos centrado en un motor de orquestación de tiempos en tiempo real. El algoritmo central sincroniza la cocina calculando y retrasando automáticamente la preparación de platos de cocción rápida frente a los de mayor duración. A nivel técnico, la solución se apoya en una arquitectura de microservicios escalable en **.NET 8**, orquestada mediante comunicación síncrona (HTTP) y asíncrona/tiempo real **(SignalR)**.
 
 ### 🌟 Features Clave
 * **Motor de Orquestación:** Sincroniza los tiempos de cocción para que toda la mesa reciba sus platos al mismo tiempo y a temperatura ideal.
@@ -94,6 +94,7 @@ graph TD
 | [**MicroservicioStock**](https://github.com/FastRestaurant/MicroservicioStock) | Control de inventario e integración con el flujo de pedidos. |
 | [**MicroservicioOrder**](https://github.com/FastRestaurant/MicroservicioOrder) | Gestión de pedidos, mesas y motor de orquestación de estados. |
 | [**MicroservicioKitchen**](https://github.com/FastRestaurant/MicroservicioKitchen) | Kitchen Display System (KDS) — visualización y priorización de comandas. |
+| [**Infraestructura**](https://github.com/FastRestaurant/Infraestructura) | Docker Compose para levantar el frontend, los microservicios y SQL Server en local. |
 
 ---
 

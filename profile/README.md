@@ -2,15 +2,8 @@
 
   <h1>🍽️ FastRestaurant</h1>
   <h3>Sistema de Gestión Inteligente para Restaurantes</h3>
-
   <p>
     <b>Microservicios • Tiempo Real (SignalR) • Orquestación de Cocina</b>
-  </p>
-
-  <p>
-    <a href="https://github.com/FastRestaurant/Frontend">
-      <img src="https://img.shields.io/badge/FRONTEND-512BD4?style=for-the-badge&logo=blazor&logoColor=white" alt="Frontend" />
-    </a>
   </p>
 </div>
 

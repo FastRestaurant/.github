@@ -8,9 +8,6 @@
   </p>
 
   <p>
-    <a href="#-arquitectura-del-sistema">
-      <img src="https://img.shields.io/badge/VER_ARQUITECTURA-0f0706?style=for-the-badge&logo=mermaid&logoColor=white" alt="Architecture" />
-    </a>
     <a href="https://github.com/FastRestaurant/Frontend">
       <img src="https://img.shields.io/badge/FRONTEND-512BD4?style=for-the-badge&logo=blazor&logoColor=white" alt="Frontend" />
     </a>
@@ -23,18 +20,18 @@
 
 **FastRestaurant** nace para resolver un problema muy concreto de los restaurantes medianos: la falta de sincronización entre el salón y la cocina durante las horas pico. Sin un sistema que ordene los tiempos de preparación, los mozos cargan comandas "a ciegas", los platos llegan fríos o desincronizados a la mesa, y cada noche de pico se convierte en una apuesta.
 
-El desafío principal no fue solo digitalizar la toma de pedidos, sino diseñar un **motor de orquestación de tiempos** capaz de retrasar automáticamente los platos rápidos hasta que los lentos estén en la etapa correcta — y recalcular todo en tiempo real ante imprevistos (un plato arruinado, una cancelación) — sobre una arquitectura de **Microservicios en .NET 8** comunicados vía HTTP y eventos en tiempo real con **SignalR**.
+El desafío principal no fue solo digitalizar la toma de pedidos, sino diseñar un **motor de orquestación de tiempos** capaz de retrasar automáticamente los platos rápidos hasta que los lentos estén en la etapa correcta — y recalcular todo en tiempo real — sobre una arquitectura de **Microservicios en .NET 8** comunicados vía HTTP y eventos en tiempo real con **SignalR**.
 
 ### 🌟 Features Clave
 * **Motor de Orquestación:** Sincroniza los tiempos de cocción para que toda la mesa reciba sus platos al mismo tiempo y a temperatura ideal.
 * **Kitchen Display System (KDS):** Pantalla interactiva que agrupa y prioriza tareas de cocina por tiempo de preparación, no por orden de ingreso.
-* **Recálculo en Tiempo Real:** Ante un plato arruinado o una cancelación, el sistema renotifica al mozo y recalcula la proyección de entrega al instante.
+* **Recálculo en Tiempo Real:** Calcula los tiempos de preparación para que los platos de una orden salgan al mismo tiempo.
 * **Roles y Permisos:** Accesos diferenciados para Gerente, Mozo y Cocinero, de extremo a extremo.
 * **Estados en Tiempo Real:** Flujo `Recibido → En Preparación → Listo → Entregado` con alertas instantáneas vía WebSockets.
 
 ---
 
-## 🏗️ Arquitectura del Sistema
+## ⚙️ Arquitectura del Sistema
 
 Arquitectura de microservicios sobre **.NET 8** con **Clean Architecture** en cada servicio, cliente **Blazor WebAssembly** y comunicación en tiempo real vía **SignalR**.
 
@@ -94,7 +91,7 @@ graph TD
 
 ---
 
-## 📦 Repositorios
+## 📂 Repositorios
 
 | Servicio | Descripción |
 |---|---|
@@ -121,7 +118,7 @@ graph TD
 
 ---
 
-## 👥 El Equipo — "SincroComanda"
+## 👨‍🍳 El Equipo — "SincroComanda"
 
 Proyecto desarrollado por un equipo de **11 integrantes** bajo metodología **Scrum**, en **3 Sprints** de 2 semanas, con entregas demo desde el Sprint 1.
 
